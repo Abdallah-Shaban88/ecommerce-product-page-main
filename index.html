@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="fonts.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <nav>
+  <div class="nav-items ">
+    <div class="burger">
+    <img src="./images/icon-menu.svg" alt="" />
+  </div>
+  <div class="logo">
+    <img src="./images/logo.svg" alt="" />
+  </div>
+  <div class="nav-links">
+    <ul class="nav-list">
+      <li class="nav-link">Collections</li>
+      <li class="nav-link">Men</li>
+      <li class="nav-link">Women</li>
+      <li class="nav-link">About</li>
+      <li class="nav-link">Contact</li>
+    </ul>
+  </div>
+  </div>
+  <div class="cart-user">
+    <button class="cart cart-btn"><span class="items-count">0</span></button>
+    <button class="user user-btn"></button>
+  </div>
+</nav>
+  <div class="item-container">
+    <ul class="cart-list">
+      <h5 class="cart-empty">Your cart is empty</h5>
+    </ul>
+    <div class="item-slider">
+      <div class="slider">
+        
+      </div>
+      <div class="slider-controls">
+        <button class="prev">
+        </button>
+        <button class="next">
+        </button>
+      </div>
+    </div>
+    <div class="item-desc">
+      
+    
+    </div>
+    <div class="item-amount">
+      <div class="amount-panal">
+        <button class="minus"></button>
+        <span class="amount"></span>
+        <button class="plus"></button>
+      </div>
+      <div class="add-btn">
+          <button><img src="./images/icon-cart.svg"/> add to cart</button>
+        </div>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script type="module" src="./item.js" charset="utf-8">
+  </script>
+</body>
+</html>

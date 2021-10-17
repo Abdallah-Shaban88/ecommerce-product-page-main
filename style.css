@@ -1,0 +1,261 @@
+*:before, *:after, *{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,body{
+  max-width: 100vw;
+  min-height: 100vh;
+  font-size: 16px;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+ul{
+  list-style: none;
+}
+nav{
+  max-width: 100%;
+  min-height: 8.75vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.nav-items{
+  display: flex;
+  justify-content: space-around;
+  min-width: 50%;
+}
+.nav-links{
+  width: 100%;
+  height: 100%;
+  margin-top: 9vh;
+  background: rgba(0,0,0,0.4);
+  position: absolute;
+  top: 0;
+  left: -100%;
+  z-index: 3;
+  transition: .8s;
+  display: none;
+}
+.nav-links.active{
+  left: 0;
+  transition: .8s;
+}
+.nav-list{
+  width: 75%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cart{
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background: none;
+  position: relative;
+}
+.cart::after{
+  content: '';
+  width: 40px;
+  height: 40px;
+  background: url(/images/icon-cart.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+}
+.items-count{
+  min-width: 20px;
+  min-height: 15px;
+  border-radius: 100%;
+  background: #f00;
+  position: absolute;
+  top:0;
+  left: 0;
+}
+.checkout{
+  width: 100%;
+  height: 45px;
+  color: #fff;
+  background: hsl(26, 100%, 55%);;
+}
+.user{
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  outline: none;
+}
+.user::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: url(/images/image-avatar.png) no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: block;
+}
+.item-container{
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.cart-list{
+  width: 94%;
+  min-height: 30vh;
+  background: #fff;
+  color: #999;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: none;
+}
+.cart-list.active{
+  display: block;
+  z-index: 3;
+}
+.cart-empty{
+  line-height: 30vh;
+  text-align: center;
+}
+.item-slider{
+  max-width: 100%;
+  height: 39vh;
+  position: relative;
+  overflow: hidden;
+}
+.slider{
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  transition: 1s;
+}
+.slide{
+  min-width: 100%;
+  
+}
+.slider-controls{
+  width: 100%;
+  padding: 0 2%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.slider-controls button{
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  
+}
+.next::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: url(/images/icon-next.svg) no-repeat center;
+  display: block;
+}
+.prev::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: url(/images/icon-previous.svg) no-repeat center;
+  display: block;
+}
+.item-desc{
+  padding: 5%;
+}
+.item-desc h5{
+  color: hsl(26, 100%, 55%);
+}
+.item-desc h1{
+  margin: 4% 0;
+}
+.item-desc p{
+  line-height: 1.8;
+  font-size: .85rem;
+}
+.item-price{
+  margin-top: 6%;
+  display: flex;
+  align-items: center;
+}
+.after-discount{
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.discount{
+  height: 70%;
+  color: hsl(26, 100%, 55%);
+  background: hsl(26, 100%, 90%);
+  font-weight: bold;
+  padding: .25rem .5rem;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+.before-discount{
+  margin-left: auto;
+  font-weight: bold;
+  text-decoration: line-through;
+}
+.item-amount{
+  width: 100%;
+  padding:0 5%;
+}
+.amount-panal{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  background: hsl(223, 64%, 98%);
+  border-radius: 10px;
+}
+.amount-panal button{
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  color: hsl(26, 100%, 55%);
+  border: none;
+  font-size: 2rem;
+  outline: none;
+}
+.minus::after{
+  width: 100%;
+  height: 100%;
+  content: '';
+  display: inline-block;
+  background: url(/images/icon-minus.svg) no-repeat center;
+}
+.plus::after{
+  width: 100%;
+  height: 100%;
+  content: '';
+  display: inline-block;
+  background: url(/images/icon-plus.svg) no-repeat center;
+}
+.add-btn{
+  width: 100%;
+}
+.add-btn button{
+  width: 100%;
+  height: 60px;
+  padding: .75rem;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  background: hsl(26, 100%, 55%);
+  color: #fff;
+  display: block;
+}

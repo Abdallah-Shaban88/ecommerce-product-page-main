@@ -37,7 +37,7 @@ import {items as item} from './items.js';
       slider.style.transform =  `translateX(-${slides[currentSlide].offsetLeft}px)`;
       }else{
       (currentSlide > 0) ? currentSlide-- : currentSlide = slides.length-1;
-      slider.style.left =  `-${slides[currentSlide].offsetLeft}px`
+      slider.style.transform =  `translateX(-${slides[currentSlide].offsetLeft}px)`;
       }
      })
    });
